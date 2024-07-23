@@ -1,0 +1,26 @@
+#the mod name as displayed in-game
+displayName: "FrireDragon's Json Lib"
+
+#the internal name of your mod
+name: "frires-json-lib"
+
+#your name
+author: "Nannerbz / FrireDragon"
+
+#the fully qualified main class of the mod
+main: "example.FriresJsonLib"
+
+#the mod description as seen in the mod dialog
+description: "A java mod Designed to be used by Json mods to add more depth to the game, adding new types of various things to make Json modding more diverse."
+
+#the mod version
+version: 1.0
+
+#the minimum game build required to run this mod
+minGameVersion: 145
+
+#mod repo on github
+repo: MEEPofFaith/testing-utilities-java
+
+#this is a java mod
+java: true
