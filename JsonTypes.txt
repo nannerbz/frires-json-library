@@ -1,0 +1,39 @@
+This TXT file is inside the Lib as a way to list and show the new types.
+The types put inside "[]" after one of the Lib types are what it extends, meaning all the parameters
+used for that type work for the new one as well, plus whatever other parameters are beneath it.
+Any stats set are either defaults or there to help you get a grip on the code.
+
+Blocks:
+
+    Crafting:
+
+    Type : WeatherCrafter (
+        "Produces when a specific weather event is active."
+        [GenericCrafter]
+        weather: rain
+    )
+
+    Effect:
+
+    Type : StatusFieldBlock (
+        "Applies a Status Effect to units within its range."
+        [GenericCrafter]
+        range: 5
+        status: overclock
+        statusDuration: 120
+    )
+
+    Type : SelectableReconstructor (
+        "A unit reconstructor that allows for multiple inputs and outputs, but at a selection (allowing inputs of the same unit!)"
+        [Reconstructor]
+        useInputIcons: false
+        plans: [
+            {
+                unit: dagger
+                resultUnit: crawler
+                {
+                    coal/10
+                }
+            }
+        ]
+    )
