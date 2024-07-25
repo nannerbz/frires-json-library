@@ -1,5 +1,6 @@
 package example.content;
 
+import example.world.types.RadiusDrill;
 import example.world.types.SelectableReconstructor;
 import example.world.types.StatusFieldBlock;
 import example.world.types.WeatherCrafter;
@@ -40,6 +41,19 @@ public class ExampleBlocks {
                 requirements(Category.units, ItemStack.with(Items.copper, 25));
                 plans.add(new DynamicUnitPlan(UnitTypes.dagger, UnitTypes.crawler, 30, ItemStack.with(Items.coal, 10)));
                 plans.add(new DynamicUnitPlan(UnitTypes.dagger, UnitTypes.nova, 60, ItemStack.with(Items.titanium, 10)));
+            }
+        };
+        new RadiusDrill("test4") {
+            {
+                localizedName = "test4";
+                requirements(Category.production, ItemStack.with(Items.copper, 25));
+                range = 3;
+                speedPerOre = 0.2f / 60;
+                updateEffect = null;
+                tier = 4;
+                boostMult = 1f;
+                mineWall = true;
+                mineFloor = false;
             }
         };
     }

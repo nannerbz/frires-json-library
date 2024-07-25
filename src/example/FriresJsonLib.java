@@ -2,6 +2,7 @@ package example;
 
 import arc.*;
 import arc.util.*;
+import example.content.ExampleBlocks;
 import example.content.LibStats;
 import example.world.LibClassMap;
 import mindustry.game.EventType.*;
@@ -27,11 +28,15 @@ public class FriresJsonLib extends Mod{
         });
     }
 
+    public void loadTestContent() {
+        ExampleBlocks.load();
+    }
+
     @Override
     public void loadContent(){
         Log.info("Loading Json Lib Data.");
         LibClassMap.load();
         LibStats.load();
-        //ExampleBlocks.load();
+        //loadTestContent();
     }
 }
