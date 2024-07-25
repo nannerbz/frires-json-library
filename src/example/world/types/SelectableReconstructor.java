@@ -30,12 +30,14 @@ import java.util.Iterator;
 
 public class SelectableReconstructor extends Reconstructor {
     public Seq<DynamicUnitPlan> plans = new Seq<>();
+    public boolean useInputIcons = false;
 
     public SelectableReconstructor(String name) {
         super(name);
         configurable = true;
         sync = true;
         clearOnDoubleTap = true;
+
 
         consume(new ConsumeItemDynamic(
                 // items seq is already shrunk, it's safe to access

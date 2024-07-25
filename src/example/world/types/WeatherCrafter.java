@@ -1,5 +1,4 @@
 package example.world.types;
-import example.content.WeathersStat;
 import mindustry.content.Weathers;
 import mindustry.type.Weather;
 import mindustry.world.blocks.production.GenericCrafter;

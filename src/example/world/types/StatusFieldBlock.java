@@ -1,5 +1,5 @@
 package example.world.types;
-import example.content.StatusStat;
+import example.content.LibStats;
 import mindustry.content.StatusEffects;
 import mindustry.gen.Groups;
 import mindustry.graphics.Drawf;
@@ -17,7 +17,7 @@ public class StatusFieldBlock extends GenericCrafter {
     }
     @Override public void setStats() {
         super.setStats();
-        stats.add(StatusStat.status, status.localizedName);
+        stats.add(LibStats.status, status.localizedName);
     }
     @Override public void drawPlace(int x, int y, int rotation, boolean valid) {
         super.drawPlace(x, y, rotation, valid);
