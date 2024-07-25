@@ -11,7 +11,7 @@ author: "Nannerbz / FrireDragon"
 main: "example.FriresJsonLib"
 
 #the mod description as seen in the mod dialog
-description: "A java mod Designed to be used by Json mods to add more depth to the game, adding new types of various things to make Json modding more diverse."
+description: "A java mod Designed to be used by Json mods to add more depth to the game, adding new types of various things to make Json modding more diverse. \n\nCurrently in the early stages of development, not much added but more will be soon."
 
 #the mod version
 version: 1.0
