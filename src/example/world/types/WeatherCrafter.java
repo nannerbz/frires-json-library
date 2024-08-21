@@ -1,5 +1,5 @@
 package example.world.types;
-import example.content.WeathersStat;
+import example.content.LibStats;
 import mindustry.content.Weathers;
 import mindustry.type.Weather;
 import mindustry.world.blocks.production.GenericCrafter;
@@ -11,7 +11,7 @@ public class WeatherCrafter extends GenericCrafter {
     }
     @Override public void setStats() {
         super.setStats();
-        stats.add(WeathersStat.weather, weather.localizedName);
+        stats.add(LibStats.weather, weather.localizedName);
     }
     public class WeatherCrafterBuild extends GenericCrafterBuild {
         @Override public void update() {

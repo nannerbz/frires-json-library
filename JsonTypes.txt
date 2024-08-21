@@ -37,3 +37,15 @@ Blocks:
             }
         ]
     )
+
+        Type : RadiusDrill (
+            "Mines ores around it in a radius. Simple."
+            [Block]
+            range: 1
+            speedPerOre: 0.2f
+            updateEffect: null
+            tier: 1
+            boostMult: 1
+            mineWall: false
+            mineFloor: true
+        )
