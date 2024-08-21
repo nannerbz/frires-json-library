@@ -5,9 +5,10 @@ import mindustry.world.meta.StatCat;
 
 public class StatusStat {
     public static Stat
-            status;
+            status,weather;
 
     public static void load() {
         status = new Stat("status", StatCat.function);
+        weather = new Stat("weather", StatCat.crafting);
     }
 }

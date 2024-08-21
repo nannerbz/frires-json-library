@@ -1,15 +1,15 @@
 package example.content;
 
+import arc.struct.Seq;
+import example.world.types.PayloadCrafter;
 import example.world.types.SelectableReconstructor;
 import example.world.types.StatusFieldBlock;
 import example.world.types.WeatherCrafter;
 import example.world.utils.DynamicUnitPlan;
-import mindustry.content.Items;
-import mindustry.content.StatusEffects;
-import mindustry.content.UnitTypes;
-import mindustry.content.Weathers;
+import mindustry.content.*;
 import mindustry.type.Category;
 import mindustry.type.ItemStack;
+import mindustry.type.PayloadStack;
 
 public class ExampleBlocks {
     public static void load(){
@@ -40,6 +40,17 @@ public class ExampleBlocks {
                 requirements(Category.units, ItemStack.with(Items.copper, 25));
                 plans.add(new DynamicUnitPlan(UnitTypes.dagger, UnitTypes.crawler, 30, ItemStack.with(Items.coal, 10)));
                 plans.add(new DynamicUnitPlan(UnitTypes.dagger, UnitTypes.nova, 60, ItemStack.with(Items.titanium, 10)));
+            }
+        };
+
+        new PayloadCrafter("payCraft") {
+            {
+                requirements(Category.units, ItemStack.with(Items.copper, 25));
+                localizedName = "Payload Crafter Test";
+                payloadRecipies.add(new PayloadRecipy(new Seq<PayloadStack>().addAll(
+                    new PayloadStack(Blocks.router,2),
+                    new PayloadStack(Blocks.thoriumWallLarge,4)
+                ), Blocks.copperWall));
             }
         };
     }

@@ -35,6 +35,6 @@ public class FriresJsonLib extends Mod{
         LibClassMap.load();
         WeathersStat.load();
         StatusStat.load();
-        //ExampleBlocks.load();
+        ExampleBlocks.load();
     }
 }
