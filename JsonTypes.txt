@@ -7,6 +7,30 @@ Blocks:
 
     Crafting:
 
+    Type : PayloadCrafter (
+        "Blocks goes in, new block comes out."
+        [Constructor]
+
+        payloadRecipies : [
+            {
+                type : PayloadRecipy
+                outputPayload : duo
+                inputPayload : [
+                    {
+                        type : PayloadStack
+                        item : copper-wall
+                        amount : 2
+                    },
+                    {
+                        type : PayloadStack
+                        item : titanium-wall
+                        amount : 1
+                    }
+                ]
+            }
+        ]
+    )
+
     Type : WeatherCrafter (
         "Produces when a specific weather event is active."
         [GenericCrafter]

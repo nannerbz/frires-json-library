@@ -1,8 +1,5 @@
 package example.world;
-import example.world.types.RadiusDrill;
-import example.world.types.SelectableReconstructor;
-import example.world.types.StatusFieldBlock;
-import example.world.types.WeatherCrafter;
+import example.world.types.*;
 
 import static mindustry.mod.ClassMap.classes;
 
@@ -16,5 +13,7 @@ public class LibClassMap {
         classes.put("SelectableReconstructorBuild", SelectableReconstructor.SelectableReconstructorBuild.class);
         classes.put("RadiusDrill", RadiusDrill.class);
         classes.put("RadiusDrillBuild", RadiusDrill.RadiusDrillBuild.class);
+        classes.put("PayloadCrafter", PayloadCrafter.class);
+        classes.put("PayloadRecipy", PayloadCrafter.PayloadRecipy.class);
     }
 }
