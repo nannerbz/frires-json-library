@@ -37,6 +37,6 @@ public class FriresJsonLib extends Mod{
         Log.info("Loading Json Lib Data.");
         LibClassMap.load();
         LibStats.load();
-        loadTestContent();
+        // loadTestContent();
     }
 }
