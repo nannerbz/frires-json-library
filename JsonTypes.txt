@@ -21,11 +21,7 @@ Blocks:
                         item : copper-wall
                         amount : 2
                     },
-                    {
-                        type : PayloadStack
-                        item : titanium-wall
-                        amount : 1
-                    }
+                    titanium-wall/1
                 ]
             }
         ]
