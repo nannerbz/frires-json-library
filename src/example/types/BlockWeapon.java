@@ -154,9 +154,7 @@ public class BlockWeapon implements Cloneable {
         this.parts = new Seq(DrawPart.class);
 
         Mods.LoadedMod currentMod = Reflect.get(content,"currentMod");
-        Log.info(currentMod);
-
-        this.name = currentMod.name + "-" + name;
+        this.name = currentMod != null ? currentMod.name + "-" + name : name;
         this.canShootEvent = (build) -> true;
         this.shotEvent = (build) -> {};
     }
