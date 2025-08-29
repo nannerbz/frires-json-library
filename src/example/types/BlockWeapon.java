@@ -34,6 +34,7 @@ import mindustry.graphics.Drawf;
 import mindustry.graphics.Pal;
 import mindustry.mod.Mods;
 import mindustry.type.Item;
+import mindustry.type.ItemSeq;
 import mindustry.type.ItemStack;
 import mindustry.type.Weapon;
 import mindustry.world.Block;
@@ -104,7 +105,7 @@ public class BlockWeapon implements Cloneable {
     public float shootCone;
     public boolean parentizeEffects;
 
-    public Item itemCost = null;
+    public ItemStack itemCost = new ItemStack();
 
     public Boolf<Building> canShootEvent;
     public Cons<Building> shotEvent;
@@ -404,7 +405,7 @@ public class BlockWeapon implements Cloneable {
             }
         }
 
-        if (mount.shoot && can && (itemCost == null || (build.block.hasItems && build.items.has(itemCost))) && (mount.reload <= 1.0E-4F || this.alwaysContinuous && mount.bullet == null) && (this.alwaysShooting || Angles.within(mount.rotation, mount.targetRotation, this.shootCone))) {
+        if (mount.shoot && can && (itemCost == null || (build.block.hasItems && build.items.has(itemCost.item,itemCost.amount))) && (mount.reload <= 1.0E-4F || this.alwaysContinuous && mount.bullet == null) && (this.alwaysShooting || Angles.within(mount.rotation, mount.targetRotation, this.shootCone))) {
             this.shoot(build, mount, bulletX, bulletY, shootAngle);
             mount.reload = this.reload;
             if (itemCost != null && build.block.hasItems) {
@@ -413,7 +414,7 @@ public class BlockWeapon implements Cloneable {
                 if (cost == 0) {
                     return;
                 }
-                build.items.remove(itemCost,cost);
+                build.items.remove(itemCost.item,itemCost.amount * cost);
                 mount.cost -= cost * bullet.ammoMultiplier;
             }
         }
