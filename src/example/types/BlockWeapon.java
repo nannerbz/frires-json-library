@@ -104,7 +104,7 @@ public class BlockWeapon implements Cloneable {
     public float shootCone;
     public boolean parentizeEffects;
 
-    public Item itemCost;
+    public Item itemCost = null;
 
     public Boolf<Building> canShootEvent;
     public Cons<Building> shotEvent;
@@ -152,6 +152,7 @@ public class BlockWeapon implements Cloneable {
         this.heatColor = Pal.turretHeat;
         this.mountType = BlockWeaponMount::new;
         this.parts = new Seq(DrawPart.class);
+
 
         Mods.LoadedMod currentMod = Reflect.get(content,"currentMod");
         this.name = currentMod != null ? currentMod.name + "-" + name : name;
