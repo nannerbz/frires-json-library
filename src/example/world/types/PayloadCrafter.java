@@ -98,6 +98,7 @@ public class PayloadCrafter extends Constructor {
 
         @Override
         public void updateTile() {
+            
             if (payload != null) {
                 payload.update(null, this);
                 if (currentRecipy != -1 && payloadRecipies.get(currentRecipy).inputPayload.contains(stac -> stac.item == payload.block())) {

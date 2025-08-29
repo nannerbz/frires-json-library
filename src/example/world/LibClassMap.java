@@ -1,5 +1,8 @@
 package example.world;
+import example.types.BlockWeapon;
+import example.types.BlockWeaponMount;
 import example.world.types.*;
+import example.world.types.effects.PartCore;
 
 import static mindustry.mod.ClassMap.classes;
 
@@ -15,5 +18,9 @@ public class LibClassMap {
         classes.put("RadiusDrillBuild", RadiusDrill.RadiusDrillBuild.class);
         classes.put("PayloadCrafter", PayloadCrafter.class);
         classes.put("PayloadRecipy", PayloadCrafter.PayloadRecipy.class);
+
+        classes.put("PartCore", PartCore.class);
+        classes.put("BlockWeapon", BlockWeapon.class);
+        classes.put("BlockWeaponMount", BlockWeaponMount.class);
     }
 }
