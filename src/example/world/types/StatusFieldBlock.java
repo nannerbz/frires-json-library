@@ -12,6 +12,8 @@ public class StatusFieldBlock extends GenericCrafter {
     public float range = 5;
     public StatusEffect status = StatusEffects.overclock;
     public float statusDuration = 1;
+    public boolean applyFriendly = true;
+    public boolean applyEnemy = false;
     public StatusFieldBlock(String name) {
         super(name);
     }
@@ -29,7 +31,10 @@ public class StatusFieldBlock extends GenericCrafter {
             if (super.shouldConsume()) {
                 super.consume();
                 Groups.unit.each((u) -> {
-                    if (u.team == this.team && Mathf.len(u.x - this.x, u.y - this.y) <= (8*range)) {
+                    if (u.team == this.team && Mathf.len(u.x - this.x, u.y - this.y) <= (8*range) && applyFriendly == true) {
+                        u.apply(status, statusDuration);
+                    }
+                    if (u.team != this.team && Mathf.len(u.x - this.x, u.y - this.y) <= (8*range) && applyEnemy == true) {
                         u.apply(status, statusDuration);
                     }
                 });
