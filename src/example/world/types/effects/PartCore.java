@@ -22,6 +22,7 @@ public class PartCore extends CoreBlock {
     public PartCore(String name) {
         super(name);
         drawer = new DrawDefault();
+        weapons = new Seq<>();
     }
 
     @Override
